@@ -1,0 +1,14 @@
+<h2>Users</h2>
+<p>Name: <span><input type="text" id="name" [(ngModel)]="name"></span></p>
+<p>Salary: <span><input type="text" id="salary" [(ngModel)]="salary"></span></p>
+<p>Date: <span><input type="date" id="date" [(ngModel)]="date"></span></p>
+<button (click)="addUser()">Add user</button>
+<button (click)="save()" [disabled]="!isSaveButtonActive">Save</button>
+
+@if(users.length != 0){
+    <div class="column">
+        <div *ngFor="let user of users; let ind = index">
+            <app-child [user]="user" (deleteUser)="deleteUser(ind)" (editUser)="editUser(ind)"></app-child>
+        </div>
+    </div>
+}
