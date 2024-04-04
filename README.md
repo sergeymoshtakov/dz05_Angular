@@ -1,5 +1,9 @@
 # Pr2
 
+## Пятое дз
+
+![Result - 5](Images/result.jpg)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.2.
 
 ## Development server
