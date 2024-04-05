@@ -2,7 +2,7 @@
 <p>Name: <span><input type="text" id="name" [(ngModel)]="name"></span></p>
 <p>Salary: <span><input type="text" id="salary" [(ngModel)]="salary"></span></p>
 <p>Date: <span><input type="date" id="date" [(ngModel)]="date"></span></p>
-<button (click)="addUser()">Add user</button>
+<button (click)="addUser()" [disabled]="isSaveButtonActive">Add user</button>
 <button (click)="save()" [disabled]="!isSaveButtonActive">Save</button>
 
 @if(users.length != 0){

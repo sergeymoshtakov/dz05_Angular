@@ -1,5 +1,5 @@
 <p><strong>Name: <span>{{ user.name | changeCase }}</span></strong></p>
-<p>Salary: {{user.salary}} £</p>
+<p>Salary: {{user.salary | currency:'USD':'symbol':'1.2-2'}}</p>
 <p>Date: {{user.date}}</p>
 <button (click)="deleteUser.emit()">Delete user</button>
 <button (click)="editUser.emit()">Edit user</button>
